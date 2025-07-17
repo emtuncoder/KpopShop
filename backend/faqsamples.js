@@ -10,6 +10,12 @@ export const faqSamples = [
         answer: "🛒 You can place an order by adding items to your cart and checking out.",
     },
     {
+        question: "About the company?",
+        keywords: ["the website", "The company"],
+        answer:
+            'You can find more information about us on our website <a class="text-pink-500 underline" href="http://localhost:2004/About" target="_blank">About Us</a>.',
+    },
+    {
         question: "Do you sell LE SSERAFIM albums?",
         keywords: ["le sserafim", "antifragile", "fearless"],
         answer:

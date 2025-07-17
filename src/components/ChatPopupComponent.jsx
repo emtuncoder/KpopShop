@@ -81,7 +81,7 @@ const ChatPopupComponent = () => {
             <div className="px-4 py-2 bg-white/30 border-b border-gray-200 space-y-1">
               <p className="text-xs text-gray-500">💡 Try asking:</p>
               <div className="flex flex-wrap gap-2">
-                {faqSamples.slice(0, 2).map((sample, i) => (
+                {faqSamples.slice(0, 3).map((sample, i) => (
                   <button
                     key={i}
                     onClick={() => sendMessage(sample.question)}
