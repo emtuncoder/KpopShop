@@ -229,7 +229,7 @@ export const UserProfileComponent = () => {
                   <img
                     src={item.product?.images?.[0] || "/fallback.jpg"}
                     alt={item.product?.title}
-                    className="w-full h-80 object-cover rounded mb-2"
+                    className="w-full h-60 object-cover rounded mb-2"
                   />
                   <h4 className="font-semibold text-lg">{item.product?.parent?.title} - {item.product?.variant}</h4>
                   <p className="text-sm text-pink-400">₫{item.product?.price?.toLocaleString()}</p>

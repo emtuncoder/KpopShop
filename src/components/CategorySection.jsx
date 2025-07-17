@@ -39,13 +39,13 @@ export const CategorySection = ({ title, categoryId }) => {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
             transition={{ duration: 0.3 }}
-            className="bg-white/70 backdrop-blur-md border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden"
+            className="bg-white/70 backdrop-blur-md border border-pink-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden"
           >
             <Link to={`/ProductDetail/${product._id}`} className="block h-full">
               <img
                 src={product.images?.[0]}
                 alt={product.title}
-                className="w-full h-64 object-cover rounded-t-2xl transition duration-300 hover:brightness-105"
+                className="w-full h-68 object-cover rounded-t-2xl transition duration-300 hover:brightness-105"
               />
               <div className="p-4 space-y-2">
                 <h3 className="text-lg font-semibold text-gray-800">
