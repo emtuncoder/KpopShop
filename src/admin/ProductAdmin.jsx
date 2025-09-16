@@ -120,7 +120,7 @@ const ProductAdmin = () => {
             </option>
           ))}
         </select>
-        <button type="submit" className="bg-green-600 text-white px-4 py-2 rounded col-span-full">
+        <button type="submit" className="bg-pink-400 text-white px-4 py-2 rounded col-span-full">
           {editingProduct ? "Update Child Product" : "Create Child Product"}
         </button>
       </form>

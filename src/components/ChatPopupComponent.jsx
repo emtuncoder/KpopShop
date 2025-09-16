@@ -31,7 +31,7 @@ const ChatPopupComponent = () => {
         messages: newMessages,
       });
 
-      const botReply = res.data.choices?.[0]?.message?.content || "🤖 Sorry, I didn’t get that.";
+      const botReply = res.data.choices?.[0]?.message?.content || "🤖 Sorry, I didn't get that.";
       setMessages([...newMessages, { role: "assistant", content: botReply }]);
     } catch (err) {
       console.error("❌ Chat error:", err.message);

@@ -2,7 +2,7 @@
 import express from "express";
 import Order from "../models/Order.js";
 import OrderItem from "../models/OrderItem.js";
-import Cart from "../models/Cart.js"; 
+import Cart from "../models/Cart.js";
 
 const router = express.Router();
 
@@ -39,8 +39,9 @@ router.post("/checkout", async (req, res) => {
 
     // 3. Clear user's cart
     await Cart.deleteMany({ customer });
-
-    res.status(201).json({ message: "Order placed successfully", order: newOrder });
+    res
+      .status(201)
+      .json({ message: "Order placed successfully", order: newOrder });
   } catch (err) {
     console.error("❌ Checkout error:", err);
     res.status(500).json({ error: err.message });
@@ -49,11 +50,23 @@ router.post("/checkout", async (req, res) => {
 
 router.get("/:userId", async (req, res) => {
   try {
-    const orders = await Order.find({ customer: req.params.userId }).populate("product");
+    const orders = await Order.find({ customer: req.params.userId }).populate("customer");
     res.json(orders);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
+
+
+router.get("/", async (req, res) => {
+  try {
+    const orders = await Order.find()
+      .populate("customer", "first_name email"); // chỉ lấy name & email
+    res.json(orders);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 
 export default router;

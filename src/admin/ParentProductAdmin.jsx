@@ -142,7 +142,7 @@ const ParentProductAdmin = () => {
             <option key={l._id} value={l._id}>{l.name}</option>
           ))}
         </select>        <textarea name="description" value={formData.description} onChange={handleChange} placeholder="Description" className="border p-2 col-span-full" />
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded col-span-full">
+        <button type="submit" className="bg-pink-400 text-white px-4 py-2 rounded col-span-full">
           {editingProduct ? "Update Product" : "Create Product"}
         </button>
       </form>

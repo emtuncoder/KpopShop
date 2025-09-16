@@ -17,6 +17,7 @@ import Customers from "../src/admin/CustomersAdmin";
 import Categories from "../src/admin/CategoriesAdmin";
 import ParentProductAdmin from "../src/admin/ParentProductAdmin";
 import UserProfile from "./pages/UserProfile";
+import Dashboard from "./admin/Dashboard";
 function App() {
   return (
     <BrowserRouter>
@@ -35,10 +36,11 @@ function App() {
         
         {/* 👩‍💻 Admin Pages */}
         <Route path="/admin" element={<AdminLayout />}>
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="products" element={<Products />} />
           <Route path="parentproducts" element={<ParentProductAdmin />} />
-          {/* <Route path="orders" element={<Orders />} /> */}
-          {/* <Route path="customers" element={<Customers />} /> */}
+          <Route path="orders" element={<Orders />} />
+          <Route path="customers" element={<Customers />} />
           <Route path="categories" element={<Categories />} />
         </Route>
 
